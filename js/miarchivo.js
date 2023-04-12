@@ -1,5 +1,4 @@
 alert("Buenas!! Para calcular el promedio de su asignatura haga click en aceptar!");
-
 let asignatura = prompt("Escriba el nombre de la asignatura:");
 
 function cuenta(){
@@ -7,13 +6,13 @@ function cuenta(){
 
     for(let i = 0; i < 3; i++){
         let calculo = parseInt(prompt("Por favor ingrese tres calificaciones:"));
-        
-        while(cuenta < 1 || cuenta > 10){
-            alert("Nota no valida. Recordá que los números permitidos son del 1 al 10. Ingrese otra vez.");
-            nota = parseInt(prompt("Ingrese la nota:"))
-        }
-        cuenta = cuenta + calculo;
 
+        if (calculo < 1 || calculo > 10){
+            alert("Por favor ingrese nuevamente:");
+            i--;
+        } else {
+            cuenta = cuenta + calculo
+        }
     }
 
     return cuenta / 3;
