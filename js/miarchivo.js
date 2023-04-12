@@ -5,18 +5,18 @@ let asignatura = prompt("Escriba el nombre de la asignatura:");
 function cuenta(){
     let cuenta = 0;
 
-    for(i = 0; i < 3; i++){
-        calculo = parseInt(prompt("Por favor ingrese tres calificaciones:"));
+    for(let i = 0; i < 3; i++){
+        let calculo = parseInt(prompt("Por favor ingrese tres calificaciones:"));
         
-        while(cuenta < 0 || cuenta > 10){
+        while(cuenta < 1 || cuenta > 10){
             alert("Nota no valida. Recordá que los números permitidos son del 1 al 10. Ingrese otra vez.");
             nota = parseInt(prompt("Ingrese la nota:"))
         }
-        
         cuenta = cuenta + calculo;
+
     }
 
-    return total = cuenta / 3;
+    return cuenta / 3;
 }
     
 let promedio = cuenta();
